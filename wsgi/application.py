@@ -34,8 +34,8 @@ class Root(object):
 
     @cherrypy.expose
     def generate(self, coords):
-        return coords
-        # return ''.join(random.sample(string.hexdigits, int(coords)))
+        # return coords
+        return ''.join(random.sample(string.hexdigits, int(coords)))
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
