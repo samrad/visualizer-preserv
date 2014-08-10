@@ -17,8 +17,8 @@ class CoordsClassifier:
                          llcrnrlon=-180, urcrnrlon=180, lat_ts=20, resolution='c')
         self.polys = []
 
-    def read_json(self):
-        json_data = open('../static/polygons.json')
+    def read_json(self, path):
+        json_data = open(path)
         data = json.load(json_data)
         json_data.close()
         for poly in data['polys']:
