@@ -12,31 +12,31 @@
         // Load map and render polys afterward
         comsys.loadMap();
 
+        // Counter (private)
+        var myCounter = new comsys.counter({
+            seconds: 15,
+            onUpdateStatus: function(sec){
+                console.log(sec);
+                $("#timer").html(sec);
+            },
+            onCounterEnd: function(){
+                console.log('counter ended & update fired');
+                comsys.update();
+            }
+        });
+
         // Click handler for timer
         $("#update").click(function () {
 
             comsys.enableUpdate = !comsys.enableUpdate;
-            console.log("update is " + comsys.enableUpdate)
+            console.log("update is " + comsys.enableUpdate);
 
-            // Counter
-            var myCounter = new comsys.counter({
-                seconds: 15,
-                onUpdateStatus: function(sec){
-                    console.log(sec);
-                    $("#timer").html(sec);
-                },
-                onCounterEnd: function(){
-                    console.log('counter ended & update fired');
-                    comsys.update();
-                }
-            });
-
-            // If update is true
             if (comsys.enableUpdate) {
                 console.log("next update in ? sec");
                 $("#update").closest("li").addClass("active");
                 myCounter.start();
-            } else {
+            }
+            else {
                 console.log("update stopped");
                 $("#update").closest("li").removeClass("active");
                 $("#timer").html("Stopped");
@@ -343,6 +343,7 @@
             array[i] = t;
         }
 
+        console.log(array);
         return array;
     };
 
@@ -383,7 +384,7 @@
             updateStatus(seconds);
             if (seconds === 0) {
                 counterEnd();
-                instance.stop();
+                seconds = options.seconds + 1 || 10;
             }
             seconds--;
         }
