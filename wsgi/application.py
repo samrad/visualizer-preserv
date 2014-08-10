@@ -15,6 +15,8 @@ from utils.coords_classifier import CoordsClassifier
 repo = os.environ['OPENSHIFT_REPO_DIR']
 STATIC_DIR = os.path.join(repo, u"wsgi", u"static")
 
+sys.path.append(os.path.join(repo, u"wsgi", u"utils"))
+
 cherrypy.config.update({'environment': 'embedded'})
 
 if cherrypy.__version__.startswith('3.0') and cherrypy.engine.state == 0:
