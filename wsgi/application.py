@@ -5,11 +5,11 @@ import string
 import random
 
 sys.stdout = sys.stderr
-sys.path.append(os.path.join(repo, u"wsgi"))
 
 # Path to static directory
 repo = os.environ['OPENSHIFT_REPO_DIR']
 STATIC_DIR = os.path.join(repo, u"wsgi", u"static")
+sys.path.append(os.path.join(repo, u"wsgi"))
 
 import atexit
 import threading
