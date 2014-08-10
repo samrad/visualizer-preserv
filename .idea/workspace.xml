@@ -32,40 +32,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wsgi/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="13" selection-start="1196" selection-end="1201" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="930">
+            <state line="46" column="20" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.8115183" vertical-offset="225" max-vertical-offset="930">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.openshift/action_hooks/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="50" selection-start="87" selection-end="191" vertical-scroll-proportion="0.05235602" vertical-offset="0" max-vertical-offset="573">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="34" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="45" selection-start="975" selection-end="986" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="630">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -91,6 +64,7 @@
         <option value="$PROJECT_DIR$/.openshift/app.py" />
         <option value="$PROJECT_DIR$/wsgi/application" />
         <option value="$PROJECT_DIR$/wsgi/static/polygons.json" />
+        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/wsgi/static/bs-index.html" />
         <option value="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
         <option value="$PROJECT_DIR$/wsgi/static/matplot-test.py" />
@@ -98,12 +72,11 @@
         <option value="$PROJECT_DIR$/wsgi/RandomCoordsRect.py" />
         <option value="$PROJECT_DIR$/wsgi/__init__.py" />
         <option value="$PROJECT_DIR$/wsgi/utils/random_coords_rect.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/wsgi/application.py" />
         <option value="$PROJECT_DIR$/wsgi/stack.py" />
         <option value="$PROJECT_DIR$/wsgi/utils/coords_classifier.py" />
         <option value="$PROJECT_DIR$/wsgi/matplot-test.py" />
-        <option value="$PROJECT_DIR$/wsgi/application.py" />
-        <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -168,20 +141,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wsgi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-comsys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-comsys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".openshift" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -675,45 +634,17 @@
       <created>1407623509856</created>
       <updated>1407623509856</updated>
     </task>
-    <task id="LOCAL-00039" summary="test">
-      <created>1407624294344</created>
-      <updated>1407624294344</updated>
-    </task>
-    <task id="LOCAL-00040" summary="test">
-      <created>1407633541537</created>
-      <updated>1407633541537</updated>
-    </task>
-    <option name="localTasksCounter" value="41" />
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
-    <todo-panel id="selected-file">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-    <todo-panel id="default-changelist">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327212" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23489426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -902,6 +833,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="219" selection-end="245" vertical-scroll-proportion="0.21465969" vertical-offset="57" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsgi/utils/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="7" selection-start="317" selection-end="317" vertical-scroll-proportion="0.2356021" vertical-offset="0" max-vertical-offset="573">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/static/polygons.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="16" selection-start="1140" selection-end="1140" vertical-scroll-proportion="-0.625" vertical-offset="330" max-vertical-offset="5175">
@@ -909,33 +861,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/wsgi/utils/random_coords_rect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="45" selection-start="975" selection-end="986" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="630">
-          <folding />
+        <state line="17" column="19" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
+          <folding>
+            <element signature="e#20#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
+    <entry file="file://$PROJECT_DIR$/wsgi/utils/coords_classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-          <folding />
+        <state line="35" column="18" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="735">
+          <folding>
+            <element signature="e#20#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsgi/stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="29" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <folding>
+            <element signature="e#20#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsgi/matplot-test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="0" selection-start="3143" selection-end="3143" vertical-scroll-proportion="2.408377" vertical-offset="0" max-vertical-offset="1650">
+          <folding>
+            <element signature="e#20#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="1196" selection-end="1201" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="930">
+        <state line="46" column="20" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.8115183" vertical-offset="225" max-vertical-offset="930">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.openshift/action_hooks/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="50" selection-start="87" selection-end="191" vertical-scroll-proportion="0.05235602" vertical-offset="0" max-vertical-offset="573">
-          <folding />
         </state>
       </provider>
     </entry>

@@ -17,7 +17,7 @@ if __name__ == '__main__':
     app = imp.load_source('application.py', 'wsgi/application.py')
 
     fwtype = "wsgiref"
-    for fw in "cherrypy":
+    for fw in ("cherrypy"):
         try:
             imp.find_module(fw)
             fwtype = fw
