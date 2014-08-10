@@ -5,10 +5,6 @@ import string
 import random
 
 sys.stdout = sys.stderr
-
-# Path to static directory
-repo = os.environ['OPENSHIFT_REPO_DIR']
-STATIC_DIR = os.path.join(repo, u"wsgi", u"static")
 sys.path.append(os.path.join(os.environ['OPENSHIFT_REPO_DIR'], u"wsgi"))
 
 import atexit
@@ -16,11 +12,9 @@ import threading
 import cherrypy
 from utils.coords_classifier import CoordsClassifier
 
-# # Path to static directory
-# repo = os.environ['OPENSHIFT_REPO_DIR']
-# STATIC_DIR = os.path.join(repo, u"wsgi", u"static")
-
-# sys.path.append(os.path.join(repo, u"wsgi"))
+# Path to static directory
+repo = os.environ['OPENSHIFT_REPO_DIR']
+STATIC_DIR = os.path.join(repo, u"wsgi", u"static")
 
 cherrypy.config.update({'environment': 'embedded'})
 
@@ -41,7 +35,6 @@ class Root(object):
 
     @cherrypy.expose
     def generate(self, coords):
-        # return coords
         return ''.join(random.sample(string.hexdigits, int(coords)))
 
     @cherrypy.expose

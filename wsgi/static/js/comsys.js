@@ -224,6 +224,76 @@
 
     }(window.comsys = window.comsys || {}, jQuery));
 
+
+;(function(comsys, $, undefined) {
+
+    // Ajax call to update the data
+    comsys.update = function() {
+
+        var request = $.ajax({
+            url: "/rhino",
+            type: "GET",
+            dataType: "json"
+        });
+
+        request.done(function(data) {
+//            shuffle(data);
+            updatePoly(shuffle(data));
+        });
+
+        request.error(function(data) {
+            console.log("Reading JSON was failed");
+        });
+    };
+
+    // Shuffle the array (private)
+    function shuffle(array) {
+        var m = array.length, t, i;
+
+        // While there remain elements to shuffle…
+        while (m) {
+
+            // Pick a remaining element…
+            i = Math.floor(Math.random() * m--);
+
+            // And swap it with the current element.
+            t = array[m];
+            array[m] = array[i];
+            array[i] = t;
+        }
+
+        return array;
+    };
+
+    function updatePoly(array) {
+
+        comsys.polys.forEach(function (entry, idx) {
+            switch (true) {
+                case (array[idx] <= 50) :
+                    entry.poly.setOptions({strokeColor: "#047331", fillColor: "#047331"});
+                    break;
+                case (array[idx] > 50 && array[idx] <= 100):
+                    entry.poly.setOptions({strokeColor: "#388C04", fillColor: "#388C04"});
+                    break;
+                case (array[idx] > 100 && array[idx] <= 150):
+                    entry.poly.setOptions({strokeColor: "#CACE17", fillColor: "#CACE17"});
+                    break;
+                case (array[idx] > 150 && array[idx] <= 600):
+                    entry.poly.setOptions({strokeColor: "#E16519", fillColor: "#E16519"});
+                    break;
+                case (array[idx] > 600):
+                    entry.poly.setOptions({strokeColor: "#CA0300", fillColor: "#CA0300"});
+                    break;
+                default:
+                    console.log("No color code");
+            }
+
+        });
+    }
+
+}(window.comsys = window.comsys || {}, jQuery));
+
+
 // function initialize() {
 
 //               // Create an array of styles.

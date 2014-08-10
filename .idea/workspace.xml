@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b036c932-15ad-484a-9f1c-b94642f89393" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/application.py" afterPath="$PROJECT_DIR$/wsgi/application.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/js/comsys.js" afterPath="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
     </list>
     <ignored path="openshift-comsys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,13 +33,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wsgi/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="20" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.8115183" vertical-offset="225" max-vertical-offset="930">
+            <state line="14" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="930">
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <marker date="1407672863794" expanded="true" signature="939:1008" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comsys.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="272" column="86" selection-start="7754" selection-end="7754" vertical-scroll-proportion="0.29565218" vertical-offset="3910" max-vertical-offset="8430">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,17 +77,17 @@
         <option value="$PROJECT_DIR$/wsgi/static/polygons.json" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/wsgi/static/bs-index.html" />
-        <option value="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
         <option value="$PROJECT_DIR$/wsgi/static/matplot-test.py" />
         <option value="$PROJECT_DIR$/wsgi/static/stack.py" />
         <option value="$PROJECT_DIR$/wsgi/RandomCoordsRect.py" />
         <option value="$PROJECT_DIR$/wsgi/__init__.py" />
         <option value="$PROJECT_DIR$/wsgi/utils/random_coords_rect.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/wsgi/application.py" />
         <option value="$PROJECT_DIR$/wsgi/stack.py" />
         <option value="$PROJECT_DIR$/wsgi/utils/coords_classifier.py" />
         <option value="$PROJECT_DIR$/wsgi/matplot-test.py" />
+        <option value="$PROJECT_DIR$/wsgi/application.py" />
+        <option value="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
       </list>
     </option>
   </component>
@@ -116,31 +127,71 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-comsys" />
+              <option name="myItemId" value="openshift-preserv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-comsys" />
+              <option name="myItemId" value="openshift-preserv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-comsys" />
+              <option name="myItemId" value="openshift-preserv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-comsys" />
+              <option name="myItemId" value="openshift-preserv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-comsys" />
+              <option name="myItemId" value="openshift-preserv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="wsgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openshift-preserv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openshift-preserv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wsgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openshift-preserv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openshift-preserv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wsgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,9 +426,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -399,6 +447,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -639,16 +690,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327212" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23489426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18731117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1223565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -656,10 +705,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6527546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327212" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -704,9 +755,20 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/wsgi/application.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="20" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1035">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1407672863794" expanded="true" signature="939:1008" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsgi/application.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1407672863794" expanded="true" signature="939:1008" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -723,6 +785,7 @@
         <state line="43" column="0" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="795">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1407672863794" expanded="true" signature="939:1008" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -739,6 +802,7 @@
         <state line="19" column="37" selection-start="402" selection-end="424" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="570">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1407672863794" expanded="true" signature="939:1008" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -748,6 +812,7 @@
         <state line="18" column="24" selection-start="349" selection-end="522" vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="645">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1407672863794" expanded="true" signature="939:1008" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -757,6 +822,7 @@
         <state line="19" column="37" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="495">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1407672863794" expanded="true" signature="939:1008" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -766,6 +832,7 @@
         <state line="27" column="0" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="495">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1407672863794" expanded="true" signature="939:1008" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -787,9 +854,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-7.0580764" vertical-offset="3889" max-vertical-offset="4440">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-7.0580764" vertical-offset="3889" max-vertical-offset="4440" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/static/bs-index.html">
@@ -826,25 +891,14 @@
         <state line="131" column="11" selection-start="2564" selection-end="2564" vertical-scroll-proportion="0.8142857" vertical-offset="1449" max-vertical-offset="69255" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="23" selection-start="3562" selection-end="3562" vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="7380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="219" selection-end="245" vertical-scroll-proportion="0.21465969" vertical-offset="57" max-vertical-offset="630">
-          <folding />
-        </state>
+        <state line="13" column="24" selection-start="219" selection-end="245" vertical-scroll-proportion="0.21465969" vertical-offset="57" max-vertical-offset="630" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
@@ -856,34 +910,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/static/polygons.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="1140" selection-end="1140" vertical-scroll-proportion="-0.625" vertical-offset="330" max-vertical-offset="5175">
-          <folding />
-        </state>
+        <state line="23" column="16" selection-start="1140" selection-end="1140" vertical-scroll-proportion="-0.625" vertical-offset="330" max-vertical-offset="5175" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/utils/random_coords_rect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="19" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <folding>
-            <element signature="e#20#45#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="17" column="19" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/utils/coords_classifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="18" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="735">
-          <folding>
-            <element signature="e#20#31#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="35" column="18" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="735" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/stack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="29" selection-start="201" selection-end="201" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
           <folding>
-            <element signature="e#20#60#0" expanded="true" />
+            <element signature="e#20#60#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -892,17 +936,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="0" selection-start="3143" selection-end="3143" vertical-scroll-proportion="2.408377" vertical-offset="0" max-vertical-offset="1650">
           <folding>
-            <element signature="e#20#31#0" expanded="true" />
+            <element signature="e#20#31#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="20" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.8115183" vertical-offset="225" max-vertical-offset="930">
+        <state line="14" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="930">
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1407672863794" expanded="true" signature="939:1008" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="272" column="86" selection-start="7754" selection-end="7754" vertical-scroll-proportion="0.29565218" vertical-offset="3910" max-vertical-offset="8430">
+          <folding />
         </state>
       </provider>
     </entry>
