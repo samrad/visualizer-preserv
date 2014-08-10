@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b036c932-15ad-484a-9f1c-b94642f89393" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/js/comsys.js" afterPath="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="openshift-comsys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +46,7 @@
       <file leaf-file-name="comsys.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="64" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.8869565" vertical-offset="135" max-vertical-offset="10125">
+            <state line="15" column="21" selection-start="321" selection-end="330" vertical-scroll-proportion="0.39130434" vertical-offset="0" max-vertical-offset="9930">
               <folding />
             </state>
           </provider>
@@ -150,47 +149,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wsgi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-preserv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-preserv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsgi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-preserv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openshift-preserv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsgi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value=".openshift" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -947,7 +906,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="64" selection-start="1373" selection-end="1373" vertical-scroll-proportion="0.8869565" vertical-offset="135" max-vertical-offset="10125">
+        <state line="15" column="21" selection-start="321" selection-end="330" vertical-scroll-proportion="0.39130434" vertical-offset="0" max-vertical-offset="9930">
           <folding />
         </state>
       </provider>

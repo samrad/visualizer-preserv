@@ -28,23 +28,31 @@
         // Click handler for timer
         $("#update").click(function () {
 
+            // Toggle the update status
             comsys.enableUpdate = !comsys.enableUpdate;
-            console.log("update is " + comsys.enableUpdate);
+            console.log("update clicked" + comsys.enableUpdate);
 
             if (comsys.enableUpdate) {
-                console.log("next update in ? sec");
-                $("#timer").html("Running");
-                $("#timer").closest("li").addClass("active");
-                $("#update").closest("li").addClass("active");
-                myCounter.start();
-            }
-            else {
+                comsys.update();
+            } else {
                 console.log("update stopped");
-                $("#update").closest("li").removeClass("active");
-                $("#timer").closest("li").removeClass("active");
-                $("#timer").html("Stopped");
-                myCounter.stop();
+                clearTimeout(comsys.timeoutId);
             }
+
+//            if (comsys.enableUpdate) {
+//                console.log("next update in ? sec");
+//                $("#timer").html("Running");
+//                $("#timer").closest("li").addClass("active");
+//                $("#update").closest("li").addClass("active");
+//                myCounter.start();
+//            }
+//            else {
+//                console.log("update stopped");
+//                $("#update").closest("li").removeClass("active");
+//                $("#timer").closest("li").removeClass("active");
+//                $("#timer").html("Stopped");
+//                myCounter.stop();
+//            }
 
         });
 
@@ -283,14 +291,12 @@
 ;
 (function (comsys, $, undefined) {
 
-    // Ajax call to update the data. It calls itself
-    // if the comsys.enableUpdate is set to true.
+    // Ajax call to update the data.
     comsys.update = function () {
+        comsys.timeoutId = setTimeout(performRequest, 10000);
+    }
 
-        if (comsys.enableUpdate === false) {
-            clearInterval(comsys.updateTimer);
-        };
-
+    var performRequest = function () {
         var request = $.ajax({
             url: "/rhino",
             type: "GET",
@@ -298,37 +304,18 @@
         });
 
         request.done(function (data) {
+            console.log("update success");
             updatePoly(shuffle(data));
+            comsys.update();
         });
 
         request.error(function (data) {
-            console.log("Reading JSON was failed");
+            console.log("update failed");
+            comsys.update();
         });
+    }
 
-        request.always(function () {
-
-//            var myCounter = new Countdown({
-//                seconds: 15,
-//                onUpdateStatus: function(sec){
-//                    console.log(sec);
-//                    $("#timer").html(sec);
-//                },
-//                onCounterEnd: function(){
-//                    console.log('counter ended & update fired');
-//                    comsys.update();
-//                }
-//            });
-//
-//            if (comsys.enableUpdate) {
-//                console.log("next update in ? sec");
-//                myCounter.start();
-//            } else {
-//                console.log("update stopped");
-//                $("#timer").html("Stopped");
-//                myCounter.stop();
-//            }
-        });
-    };
+//    };
 
     // Shuffle the array (private)
     function shuffle(array) {
