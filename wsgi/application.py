@@ -20,7 +20,7 @@ from utils.coords_classifier import CoordsClassifier
 # repo = os.environ['OPENSHIFT_REPO_DIR']
 # STATIC_DIR = os.path.join(repo, u"wsgi", u"static")
 
-sys.path.append(os.path.join(repo, u"wsgi"))
+# sys.path.append(os.path.join(repo, u"wsgi"))
 
 cherrypy.config.update({'environment': 'embedded'})
 
@@ -53,7 +53,6 @@ class Root(object):
 
     @cherrypy.expose
     def rhino(self):
-        # return "FFFF"
         classifier = CoordsClassifier()
         classifier.read_json(os.path.join(STATIC_DIR, u'polygons.json'))
         return classifier.classify()
