@@ -9,7 +9,7 @@ sys.stdout = sys.stderr
 import atexit
 import threading
 import cherrypy
-from utils.coords_classifier import CoordsClassifier
+# from utils.coords_classifier import CoordsClassifier
 
 # Path to static directory
 repo = os.environ['OPENSHIFT_REPO_DIR']
