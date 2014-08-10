@@ -5,17 +5,22 @@ import string
 import random
 
 sys.stdout = sys.stderr
-
-import atexit
-import threading
-import cherrypy
-# from utils.coords_classifier import CoordsClassifier
+sys.path.append(os.path.join(repo, u"wsgi"))
 
 # Path to static directory
 repo = os.environ['OPENSHIFT_REPO_DIR']
 STATIC_DIR = os.path.join(repo, u"wsgi", u"static")
 
-sys.path.append(os.path.join(repo, u"wsgi", u"utils"))
+import atexit
+import threading
+import cherrypy
+from utils.coords_classifier import CoordsClassifier
+
+# # Path to static directory
+# repo = os.environ['OPENSHIFT_REPO_DIR']
+# STATIC_DIR = os.path.join(repo, u"wsgi", u"static")
+
+sys.path.append(os.path.join(repo, u"wsgi"))
 
 cherrypy.config.update({'environment': 'embedded'})
 
@@ -48,10 +53,10 @@ class Root(object):
 
     @cherrypy.expose
     def rhino(self):
-        return "FFFF"
-        # classifier = CoordsClassifier()
-        # classifier.read_json(os.path.join(STATIC_DIR, u'polygons.json'))
-        # return classifier.classify()
+        # return "FFFF"
+        classifier = CoordsClassifier()
+        classifier.read_json(os.path.join(STATIC_DIR, u'polygons.json'))
+        return classifier.classify()
 
 
 application = cherrypy.Application(Root(), script_name=None, config=None)
