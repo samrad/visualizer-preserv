@@ -56,7 +56,7 @@ class Root(object):
     def rhino(self):
         classifier = CoordsClassifier()
         classifier.read_json(os.path.join(STATIC_DIR, u'polygons.json'))
-        return "shit" # classifier.classify()
+        return classifier.classify()
 
 
 application = cherrypy.Application(Root(), script_name=None, config=None)
