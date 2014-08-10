@@ -1,100 +1,109 @@
-;(function(comsys, $, undefined) {
+;
+(function (comsys, $, undefined) {
 
-  // Public property to hold markers
-  comsys.markers = [];
+    // Public property to hold markers
+    comsys.markers = [];
 
-  comsys.init = function() {
+    comsys.init = function () {
 
-    // Load map and render polys afterward
-    comsys.loadMap();
+        // Load map and render polys afterward
+        comsys.loadMap();
 
-    // Click handler for dummy
-    $("#dummy").click(function() {
-      console.log("clicked");
-
-      // Clear the map to avoid overlaying markers
-      comsys.markers.forEach(function clear(entry) {
-        entry.setMap(null);
-      })
-
-      var dummy  = [
-      new google.maps.LatLng(50.776204378856654, 6.07514139264822),
-      new google.maps.LatLng(50.778063265101366, 6.078681908547878),
-      new google.maps.LatLng(50.78012410861307, 6.076223831623793),
-      new google.maps.LatLng(50.77981883560066, 6.075816135853529),
-      new google.maps.LatLng(50.77993416119513, 6.076170187443495),
-      new google.maps.LatLng(50.78114845460269, 6.074668150395155),
-      new google.maps.LatLng(50.77814038141936, 6.060529346577823),
-      new google.maps.LatLng(50.778194654270685, 6.060228939168155),
-      new google.maps.LatLng(50.77828963160895, 6.060454244725406),
-      new google.maps.LatLng(50.778836648561914, 6.072716675698757),
-      new google.maps.LatLng(50.77611469759955, 6.079978924244642),
-      new google.maps.LatLng(50.77580261396482, 6.078058462589979),
-      new google.maps.LatLng(50.77619611037916, 6.077082138508558),
-      new google.maps.LatLng(50.780790402439926, 6.077437363564968),
-      new google.maps.LatLng(50.78195718874058, 6.073167286813259),
-      new google.maps.LatLng(50.77844317436444, 6.070957146584988),
-      new google.maps.LatLng(50.77798185557204, 6.0666656121611595),
-      new google.maps.LatLng(50.77835349740038, 6.060044746845961),
-      new google.maps.LatLng(50.776969524717245, 6.064411383122206),
-      new google.maps.LatLng(50.78002913500056, 6.064647417515516),
-      new google.maps.LatLng(50.77709842586344, 6.076706629246473),
-      new google.maps.LatLng(50.777871825279874, 6.079603414982557),
-      new google.maps.LatLng(50.77688811328396, 6.079442482441664),
-      new google.maps.LatLng(50.77862485979052, 6.077918987721205),
-      new google.maps.LatLng(50.77629713411306, 6.0800480749458075),
-      new google.maps.LatLng(50.77609021013419, 6.077210297808051)
-      ];
-
-      dummy.forEach(function target(coord) {
-
-        var color = "red";
-        comsys.polys.forEach(function area(poi) {
-          if(google.maps.geometry.poly.containsLocation(coord, poi.poly)) {
-            color = "green";
-            return;
-          };
+        // CLick handler for timer
+        $("#timer").click(function () {
+            comsys.updateTimer = setInterval(comsys.update(), 10000);
         });
 
-        var circle = {
-          path: google.maps.SymbolPath.CIRCLE,
-          fillColor: color,
-          fillOpacity: 1.0,
-          strokeColor: 'white',
-          strokeWeight: 1.0,
-          scale: 5
-        };
+        // Click handler for dummy
+        $("#dummy").click(function () {
+            console.log("dummy clicked");
 
-        var tmp = new google.maps.Marker({
-          position: coord,
-          // map: comsys.map,
-          icon: circle
+            // Clear the map to avoid overlaying markers
+            comsys.markers.forEach(function clear(entry) {
+                entry.setMap(null);
+            })
+
+            var dummy = [
+                new google.maps.LatLng(50.776204378856654, 6.07514139264822),
+                new google.maps.LatLng(50.778063265101366, 6.078681908547878),
+                new google.maps.LatLng(50.78012410861307, 6.076223831623793),
+                new google.maps.LatLng(50.77981883560066, 6.075816135853529),
+                new google.maps.LatLng(50.77993416119513, 6.076170187443495),
+                new google.maps.LatLng(50.78114845460269, 6.074668150395155),
+                new google.maps.LatLng(50.77814038141936, 6.060529346577823),
+                new google.maps.LatLng(50.778194654270685, 6.060228939168155),
+                new google.maps.LatLng(50.77828963160895, 6.060454244725406),
+                new google.maps.LatLng(50.778836648561914, 6.072716675698757),
+                new google.maps.LatLng(50.77611469759955, 6.079978924244642),
+                new google.maps.LatLng(50.77580261396482, 6.078058462589979),
+                new google.maps.LatLng(50.77619611037916, 6.077082138508558),
+                new google.maps.LatLng(50.780790402439926, 6.077437363564968),
+                new google.maps.LatLng(50.78195718874058, 6.073167286813259),
+                new google.maps.LatLng(50.77844317436444, 6.070957146584988),
+                new google.maps.LatLng(50.77798185557204, 6.0666656121611595),
+                new google.maps.LatLng(50.77835349740038, 6.060044746845961),
+                new google.maps.LatLng(50.776969524717245, 6.064411383122206),
+                new google.maps.LatLng(50.78002913500056, 6.064647417515516),
+                new google.maps.LatLng(50.77709842586344, 6.076706629246473),
+                new google.maps.LatLng(50.777871825279874, 6.079603414982557),
+                new google.maps.LatLng(50.77688811328396, 6.079442482441664),
+                new google.maps.LatLng(50.77862485979052, 6.077918987721205),
+                new google.maps.LatLng(50.77629713411306, 6.0800480749458075),
+                new google.maps.LatLng(50.77609021013419, 6.077210297808051)
+            ];
+
+            dummy.forEach(function target(coord) {
+
+                var color = "red";
+                comsys.polys.forEach(function area(poi) {
+                    if (google.maps.geometry.poly.containsLocation(coord, poi.poly)) {
+                        color = "green";
+                        return;
+                    }
+                    ;
+                });
+
+                var circle = {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    fillColor: color,
+                    fillOpacity: 1.0,
+                    strokeColor: 'white',
+                    strokeWeight: 1.0,
+                    scale: 5
+                };
+
+                var tmp = new google.maps.Marker({
+                    position: coord,
+                    // map: comsys.map,
+                    icon: circle
+                });
+
+                comsys.markers.push(tmp);
+            });
+
+            // Animated
+            var c = 0;
+            var timer = setInterval(function () {
+                comsys.markers[c].setMap(comsys.map);
+                c++;
+                if (c === comsys.markers.length) {
+                    clearInterval(timer);
+                }
+                ;
+            }, 100);
+
+
+            // Return false to avoid href effect on anchor
+            return false;
         });
-
-        comsys.markers.push(tmp);
-      });
-
-      // Animated
-      var c = 0;
-      var timer = setInterval(function() {
-          comsys.markers[c].setMap(comsys.map);
-          c++;
-          if (c === comsys.markers.length) {
-              clearInterval(timer);
-          };
-      }, 100);
-
-
-      // Return false to avoid href effect on anchor
-      return false;
-    });
-};
+    };
 
 }(window.comsys = window.comsys || {}, jQuery));
 
 
 // [comsys.readJSON] Retrieve JSON and render polygons
-;(function(comsys, $, undefined) {
+;
+(function (comsys, $, undefined) {
 
     // Private fields for Polys' style
     var strkColor = '#27BAFF';
@@ -108,106 +117,118 @@
 
     // Render ploys on map (private)
     function drawPolys() {
-      comsys.polys.forEach(function(entry) {
-        console.log(entry.poly);
-        entry.poly.setMap(comsys.map);
-      });
+        comsys.polys.forEach(function (entry) {
+            console.log(entry.poly);
+            entry.poly.setMap(comsys.map);
+        });
     };
 
     // Ajax call to get the JSON and parse it
     // to Polys
-    comsys.readJSON = function() {
+    comsys.readJSON = function () {
 
-      var request = $.ajax({
-        url: "/monkey",
-        type: "GET",
-        dataType: "json"
-      });
+        var request = $.ajax({
+            url: "/monkey",
+            type: "GET",
+            dataType: "json"
+        });
 
-      request.done(function(data) {
-        jsonToPoly(data);
-        drawPolys();
-      });
+        request.done(function (data) {
+            jsonToPoly(data);
+            drawPolys();
+        });
 
-      request.error(function(data) {
-        console.log("Reading JSON was failed");
-      });
+        request.error(function (data) {
+            console.log("Reading JSON was failed");
+        });
     };
 
     // Convert the JSON to POI objects
     // and store them in comsys.polys[]
     function jsonToPoly(json) {
-      json.polys.forEach(function(p) {
-        var name = p.name;
-        var path = [];
-        p.vtx.forEach(function(v) {
-          path.push(new google.maps.LatLng(v.lat, v.lng));
+        json.polys.forEach(function (p) {
+            var name = p.name;
+            var path = [];
+            p.vtx.forEach(function (v) {
+                path.push(new google.maps.LatLng(v.lat, v.lng));
+            });
+
+            // Construction of Google Map's polys
+            var tmp = new google.maps.Polygon({
+                paths: path,
+                strokeColor: strkColor,
+                strokeOpacity: strkOpacity,
+                strokeWeight: strkWeight,
+                fillColor: fColor,
+                fillOpacity: fOpacity
+            });
+
+            comsys.polys.push(new poi(name, tmp));
         });
-
-        // Construction of Google Map's polys
-        var tmp = new google.maps.Polygon({
-         paths: path,
-         strokeColor: strkColor,
-         strokeOpacity: strkOpacity,
-         strokeWeight: strkWeight,
-         fillColor: fColor,
-         fillOpacity: fOpacity
-       });
-
-        comsys.polys.push(new poi(name, tmp));
-      });
     };
 
     // Class for POIs (private)
     function poi(n, p) {
-      this.name = n;
-      this.poly = p;
+        this.name = n;
+        this.poly = p;
     };
 
-  }(window.comsys = window.comsys || {}, jQuery));
+}(window.comsys = window.comsys || {}, jQuery));
 
 
 // [comsys.loadMap] Initialization of the Google Map
-;(function(comsys, $, undefined) {
+;
+(function (comsys, $, undefined) {
 
-  // Reference to the Map element
-  comsys.map = {};
+    // Reference to the Map element
+    comsys.map = {};
 
     // Google Map style (private)
-    var styles = [{
-      "stylers": [{
-        "hue": "#ff1a00"
-      }, {
-        "invert_lightness": true
-      }, {
-        "saturation": -100
-      }, {
-        "lightness": 33
-      }, {
-        "gamma": 0.5
-      }]
-    }, {
-      "featureType": "water",
-      "elementType": "geometry",
-      "stylers": [{
-        "color": "#2D333C"
-      }]
-    }];
+    var styles = [
+        {
+            "stylers": [
+                {
+                    "hue": "#ff1a00"
+                },
+                {
+                    "invert_lightness": true
+                },
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": 33
+                },
+                {
+                    "gamma": 0.5
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+                {
+                    "color": "#2D333C"
+                }
+            ]
+        }
+    ];
 
     // Load Google Map (public)
-    comsys.loadMap = function() {
+    comsys.loadMap = function () {
 
         // Create a new StyledMapType object, passing it the array of styles,
         // as well as the name to be displayed on the map type control.
         var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
 
-        var aachen = new google.maps.LatLng(50.778429606229615, 6.070034466683865);
+        var aachen = new google.maps.LatLng(50.780912509314476, 6.0665154084563255);
         var mapOptions = {
-          zoom: 16,
-          center: aachen,
-          mapTypeControlOptions: {
-            mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-          }
+            zoom: 15,
+            center: aachen,
+            mapTypeControlOptions: {
+                mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+            }
         };
 
         // Getting the 'map' element
@@ -220,15 +241,16 @@
         // Ajax request to read the JSON
         comsys.readJSON();
 
-      };
+    };
 
-    }(window.comsys = window.comsys || {}, jQuery));
+}(window.comsys = window.comsys || {}, jQuery));
 
 
-;(function(comsys, $, undefined) {
+;
+(function (comsys, $, undefined) {
 
     // Ajax call to update the data
-    comsys.update = function() {
+    comsys.update = function () {
 
         var request = $.ajax({
             url: "/rhino",
@@ -236,12 +258,11 @@
             dataType: "json"
         });
 
-        request.done(function(data) {
-//            shuffle(data);
+        request.done(function (data) {
             updatePoly(shuffle(data));
         });
 
-        request.error(function(data) {
+        request.error(function (data) {
             console.log("Reading JSON was failed");
         });
     };
