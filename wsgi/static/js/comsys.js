@@ -15,34 +15,14 @@
         // Click handler for timer
         $("#update").click(function () {
 
+            comsys.enableUpdate = !comsys.enableUpdate;
+            if (comsys.enableUpdate) {
+                $("#update").closest("li").addClass("active");
+            } else {
+                $("#update").closest("li").removeClass("active");
+            }
             comsys.update();
 
-//            $("update").closest("li").addClass("active");
-//            var s = 10;
-//            comsys.enableUpdate = !comsys.enableUpdate;
-//            comsys.upIntervalId = setInterval(function() {
-//
-//                // If update is turned off
-//                if(!update) {
-//                    $('#timer').html("Stopped");
-//                    $("update").closest("li").removeClass("active");
-//                    return clearInterval(updateTimer);
-//                }
-//
-//                var timer = $('#timer').html(s);
-//
-//                s -= 1;
-//                if (s < 0) {
-//
-//                    comsys.update();
-//                    console.log("update fired");
-//                    s = 10;
-//                }
-//
-//                $('#timer').html(s);
-//
-//
-//            }, 1000);
         });
 
         // Click handler for dummy
@@ -280,7 +260,8 @@
 ;
 (function (comsys, $, undefined) {
 
-    // Ajax call to update the data
+    // Ajax call to update the data. It calls itself
+    // if the comsys.enableUpdate is set to true.
     comsys.update = function () {
 
         if (comsys.enableUpdate === false) {
@@ -304,10 +285,13 @@
         request.always(function () {
 
             var myCounter = new Countdown({
-                seconds: 5,
-                onUpdateStatus: function(sec){ console.log(sec); },
+                seconds: 15,
+                onUpdateStatus: function(sec){
+                    console.log(sec);
+                    $("#timer").html(sec);
+                },
                 onCounterEnd: function(){
-                    console.log('counter ended!');
+                    console.log('counter ended & update fired');
                     comsys.update();
                 }
             });
@@ -317,6 +301,7 @@
                 myCounter.start();
             } else {
                 console.log("update stopped");
+                $("#timer").html("Stopped");
                 myCounter.stop();
             }
         });
