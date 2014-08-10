@@ -9,7 +9,7 @@ sys.stdout = sys.stderr
 # Path to static directory
 repo = os.environ['OPENSHIFT_REPO_DIR']
 STATIC_DIR = os.path.join(repo, u"wsgi", u"static")
-sys.path.append(os.path.join(repo, u"wsgi"))
+sys.path.append(os.path.join(os.environ['OPENSHIFT_REPO_DIR'], u"wsgi"))
 
 import atexit
 import threading
