@@ -13,34 +13,36 @@
         comsys.loadMap();
 
         // Click handler for timer
-        $("#timer").click(function () {
+        $("#update").click(function () {
 
-            $("update").closest("li").addClass("active");
-            var s = 10;
-            comsys.enableUpdate = !comsys.enableUpdate;
-            comsys.upIntervalId = setInterval(function() {
+            comsys.update();
 
-                var timer = $('#timer').html(s);
-
-                // If update is turned off
-                if(!update) {
-                    $('#timer').html("Stopped");
-                    $("update").closest("li").removeClass("active");
-                    return clearInterval(updateTimer);
-                }
-
-                s -= 1;
-                if (s < 0) {
-
-                    comsys.update();
-                    console.log("update fired");
-                    s = 10;
-                }
-
-                $('#timer').html(s);
-
-
-            }, 1000);
+//            $("update").closest("li").addClass("active");
+//            var s = 10;
+//            comsys.enableUpdate = !comsys.enableUpdate;
+//            comsys.upIntervalId = setInterval(function() {
+//
+//                // If update is turned off
+//                if(!update) {
+//                    $('#timer').html("Stopped");
+//                    $("update").closest("li").removeClass("active");
+//                    return clearInterval(updateTimer);
+//                }
+//
+//                var timer = $('#timer').html(s);
+//
+//                s -= 1;
+//                if (s < 0) {
+//
+//                    comsys.update();
+//                    console.log("update fired");
+//                    s = 10;
+//                }
+//
+//                $('#timer').html(s);
+//
+//
+//            }, 1000);
         });
 
         // Click handler for dummy
@@ -298,6 +300,26 @@
         request.error(function (data) {
             console.log("Reading JSON was failed");
         });
+
+        request.always(function () {
+
+            var myCounter = new Countdown({
+                seconds: 5,
+                onUpdateStatus: function(sec){ console.log(sec); },
+                onCounterEnd: function(){
+                    console.log('counter ended!');
+                    comsys.update();
+                }
+            });
+
+            if (comsys.enableUpdate) {
+                console.log("next update in ? sec");
+                myCounter.start();
+            } else {
+                console.log("update stopped");
+                myCounter.stop();
+            }
+        });
     };
 
     // Shuffle the array (private)
@@ -343,6 +365,34 @@
             }
 
         });
+    };
+
+    function Countdown(options) {
+        var timer,
+            instance = this,
+            seconds = options.seconds || 10,
+            updateStatus = options.onUpdateStatus || function () {},
+            counterEnd = options.onCounterEnd || function () {};
+
+        function decrementCounter() {
+            updateStatus(seconds);
+            if (seconds === 0) {
+                counterEnd();
+                instance.stop();
+            }
+            seconds--;
+        }
+
+        this.start = function () {
+            clearInterval(timer);
+            timer = 0;
+            seconds = options.seconds;
+            timer = setInterval(decrementCounter, 1000);
+        };
+
+        this.stop = function () {
+            clearInterval(timer);
+        };
     }
 
 }(window.comsys = window.comsys || {}, jQuery));
