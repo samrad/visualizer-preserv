@@ -52,10 +52,11 @@ class Root(object):
         return polys_json
 
     @cherrypy.expose
+    @cherrypy.tools.json_out()
     def rhino(self):
         classifier = CoordsClassifier()
         classifier.read_json(os.path.join(STATIC_DIR, u'polygons.json'))
-        return classifier.classify()
+        return "shit" # classifier.classify()
 
 
 application = cherrypy.Application(Root(), script_name=None, config=None)
