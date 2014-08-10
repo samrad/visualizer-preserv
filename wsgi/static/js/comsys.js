@@ -14,10 +14,10 @@
 
         // Counter (private)
         var myCounter = new comsys.counter({
-            seconds: 15,
+            seconds: 20,
             onUpdateStatus: function(sec){
                 console.log(sec);
-                $("#timer").html(sec);
+//                $("#timer").html(sec);
             },
             onCounterEnd: function(){
                 console.log('counter ended & update fired');
@@ -33,12 +33,15 @@
 
             if (comsys.enableUpdate) {
                 console.log("next update in ? sec");
+                $("#timer").html("Running");
+                $("#timer").closest("li").addClass("active");
                 $("#update").closest("li").addClass("active");
                 myCounter.start();
             }
             else {
                 console.log("update stopped");
                 $("#update").closest("li").removeClass("active");
+                $("#timer").closest("li").removeClass("active");
                 $("#timer").html("Stopped");
                 myCounter.stop();
             }
