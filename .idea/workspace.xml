@@ -47,7 +47,7 @@
       <file leaf-file-name="comsys.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="41" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.2521739" vertical-offset="380" max-vertical-offset="9975">
+            <state line="242" column="63" selection-start="7701" selection-end="7701" vertical-scroll-proportion="0.2513661" vertical-offset="3492" max-vertical-offset="9585">
               <folding />
             </state>
           </provider>
@@ -85,8 +85,8 @@
         <option value="$PROJECT_DIR$/wsgi/utils/coords_classifier.py" />
         <option value="$PROJECT_DIR$/wsgi/matplot-test.py" />
         <option value="$PROJECT_DIR$/wsgi/application.py" />
-        <option value="$PROJECT_DIR$/wsgi/static/bs-index.html" />
         <option value="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
+        <option value="$PROJECT_DIR$/wsgi/static/bs-index.html" />
       </list>
     </option>
   </component>
@@ -918,14 +918,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/static/bs-index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="33" selection-start="2839" selection-end="2839" vertical-scroll-proportion="0.669145" vertical-offset="495" max-vertical-offset="1260">
+        <state line="24" column="18" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.58550185" vertical-offset="45" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="41" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.2521739" vertical-offset="380" max-vertical-offset="9975">
+        <state line="242" column="63" selection-start="7701" selection-end="7701" vertical-scroll-proportion="0.2513661" vertical-offset="3492" max-vertical-offset="9585">
           <folding />
         </state>
       </provider>

@@ -12,19 +12,6 @@
         // Load map and render polys afterward
         comsys.loadMap();
 
-//        // Counter (private)
-//        var myCounter = new comsys.counter({
-//            seconds: 20,
-//            onUpdateStatus: function(sec){
-//                console.log(sec);
-////                $("#timer").html(sec);
-//            },
-//            onCounterEnd: function(){
-//                console.log('counter ended & update fired');
-//                comsys.update();
-//            }
-//        });
-
         // Click handler for timer
         $("#update").click(function () {
 
@@ -41,20 +28,7 @@
                 clearTimeout(comsys.timeoutId);
             }
 
-//            if (comsys.enableUpdate) {
-//                console.log("next update in ? sec");
-//                $("#timer").html("Running");
-//                $("#timer").closest("li").addClass("active");
-//                $("#update").closest("li").addClass("active");
-//                myCounter.start();
-//            }
-//            else {
-//                console.log("update stopped");
-//                $("#update").closest("li").removeClass("active");
-//                $("#timer").closest("li").removeClass("active");
-//                $("#timer").html("Stopped");
-//                myCounter.stop();
-//            }
+            return false;
 
         });
 
@@ -266,7 +240,7 @@
         // as well as the name to be displayed on the map type control.
         var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
 
-        var aachen = new google.maps.LatLng(50.780912509314476, 6.0665154084563255);
+        var aachen = new google.maps.LatLng(50.778629, 6.066861);
         var mapOptions = {
             zoom: 15,
             center: aachen,
