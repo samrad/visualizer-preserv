@@ -4,14 +4,43 @@
     // Public property to hold markers
     comsys.markers = [];
 
+    // Toggle the update repetition
+    comsys.enableUpdate = false;
+
     comsys.init = function () {
 
         // Load map and render polys afterward
         comsys.loadMap();
 
-        // CLick handler for timer
+        // Click handler for timer
         $("#timer").click(function () {
-            comsys.updateTimer = setInterval(comsys.update(), 10000);
+
+            $("update").closest("li").addClass("active");
+            var s = 10;
+            comsys.enableUpdate = !comsys.enableUpdate;
+            comsys.upIntervalId = setInterval(function() {
+
+                var timer = $('#timer').html(s);
+
+                // If update is turned off
+                if(!update) {
+                    $('#timer').html("Stopped");
+                    $("update").closest("li").removeClass("active");
+                    return clearInterval(updateTimer);
+                }
+
+                s -= 1;
+                if (s < 0) {
+
+                    comsys.update();
+                    console.log("update fired");
+                    s = 10;
+                }
+
+                $('#timer').html(s);
+
+
+            }, 1000);
         });
 
         // Click handler for dummy
@@ -251,6 +280,10 @@
 
     // Ajax call to update the data
     comsys.update = function () {
+
+        if (comsys.enableUpdate === false) {
+            clearInterval(comsys.updateTimer);
+        };
 
         var request = $.ajax({
             url: "/rhino",
