@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b036c932-15ad-484a-9f1c-b94642f89393" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/bs-index.html" afterPath="$PROJECT_DIR$/wsgi/static/bs-index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/js/comsys.js" afterPath="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
     </list>
     <ignored path="openshift-comsys.iws" />
@@ -44,19 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comsys.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="comsys.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="303" column="41" selection-start="9455" selection-end="9455" vertical-scroll-proportion="0.0" vertical-offset="4137" max-vertical-offset="9765">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bs-index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wsgi/static/bs-index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="19" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.6133829" vertical-offset="495" max-vertical-offset="1260">
+            <state line="43" column="13" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.8086957" vertical-offset="180" max-vertical-offset="10065">
               <folding />
             </state>
           </provider>
@@ -94,8 +84,8 @@
         <option value="$PROJECT_DIR$/wsgi/utils/coords_classifier.py" />
         <option value="$PROJECT_DIR$/wsgi/matplot-test.py" />
         <option value="$PROJECT_DIR$/wsgi/application.py" />
-        <option value="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
         <option value="$PROJECT_DIR$/wsgi/static/bs-index.html" />
+        <option value="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
       </list>
     </option>
   </component>
@@ -947,16 +937,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
+    <entry file="file://$PROJECT_DIR$/wsgi/static/bs-index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="303" column="41" selection-start="9455" selection-end="9455" vertical-scroll-proportion="0.0" vertical-offset="4137" max-vertical-offset="9765">
+        <state line="55" column="19" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.6133829" vertical-offset="495" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wsgi/static/bs-index.html">
+    <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="19" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.6133829" vertical-offset="495" max-vertical-offset="1260">
+        <state line="43" column="13" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.8086957" vertical-offset="180" max-vertical-offset="10065">
           <folding />
         </state>
       </provider>
