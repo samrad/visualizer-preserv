@@ -19,7 +19,7 @@
             console.log("update is " + comsys.enableUpdate)
 
             // Counter
-            var myCounter = new Countdown({
+            var myCounter = new comsys.counter({
                 seconds: 15,
                 onUpdateStatus: function(sec){
                     console.log(sec);
@@ -372,7 +372,7 @@
         });
     };
 
-    function Countdown(options) {
+    comsys.counter = function(options) {
         var timer,
             instance = this,
             seconds = options.seconds || 10,
