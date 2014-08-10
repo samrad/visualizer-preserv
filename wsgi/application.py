@@ -46,10 +46,9 @@ class Root(object):
 
     @cherrypy.expose
     def rhino(self):
-        return "Fuck"
-        # classifier = CoordsClassifier()
-        # classifier.read_json()
-        # return classifier.classify()
+        classifier = CoordsClassifier()
+        classifier.read_json()
+        return classifier.classify()
 
 
 application = cherrypy.Application(Root(), script_name=None, config=None)
