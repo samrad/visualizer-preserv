@@ -12,29 +12,31 @@
         // Load map and render polys afterward
         comsys.loadMap();
 
-        // Counter (private)
-        var myCounter = new comsys.counter({
-            seconds: 20,
-            onUpdateStatus: function(sec){
-                console.log(sec);
-//                $("#timer").html(sec);
-            },
-            onCounterEnd: function(){
-                console.log('counter ended & update fired');
-                comsys.update();
-            }
-        });
+//        // Counter (private)
+//        var myCounter = new comsys.counter({
+//            seconds: 20,
+//            onUpdateStatus: function(sec){
+//                console.log(sec);
+////                $("#timer").html(sec);
+//            },
+//            onCounterEnd: function(){
+//                console.log('counter ended & update fired');
+//                comsys.update();
+//            }
+//        });
 
         // Click handler for timer
         $("#update").click(function () {
 
             // Toggle the update status
             comsys.enableUpdate = !comsys.enableUpdate;
-            console.log("update clicked" + comsys.enableUpdate);
+            console.log("update clicked: " + comsys.enableUpdate);
 
             if (comsys.enableUpdate) {
+                $("#timer").html("Waiting");
                 comsys.update();
             } else {
+                $("#timer").html("Stopped");
                 console.log("update stopped");
                 clearTimeout(comsys.timeoutId);
             }
@@ -297,6 +299,7 @@
     }
 
     var performRequest = function () {
+        $("#timer").html("Sending");
         var request = $.ajax({
             url: "/rhino",
             type: "GET",

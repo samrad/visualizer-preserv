@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b036c932-15ad-484a-9f1c-b94642f89393" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/bs-index.html" afterPath="$PROJECT_DIR$/wsgi/static/bs-index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/js/comsys.js" afterPath="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
     </list>
     <ignored path="openshift-comsys.iws" />
@@ -46,7 +47,7 @@
       <file leaf-file-name="comsys.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="321" selection-end="330" vertical-scroll-proportion="0.39130434" vertical-offset="0" max-vertical-offset="9930">
+            <state line="35" column="41" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.2521739" vertical-offset="380" max-vertical-offset="9975">
               <folding />
             </state>
           </provider>
@@ -149,7 +150,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".openshift" />
+              <option name="myItemId" value="wsgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openshift-preserv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openshift-preserv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wsgi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -899,14 +918,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/static/bs-index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="19" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.6133829" vertical-offset="495" max-vertical-offset="1260">
+        <state line="57" column="33" selection-start="2839" selection-end="2839" vertical-scroll-proportion="0.669145" vertical-offset="495" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wsgi/static/js/comsys.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="321" selection-end="330" vertical-scroll-proportion="0.39130434" vertical-offset="0" max-vertical-offset="9930">
+        <state line="35" column="41" selection-start="1016" selection-end="1016" vertical-scroll-proportion="0.2521739" vertical-offset="380" max-vertical-offset="9975">
           <folding />
         </state>
       </provider>
