@@ -39,7 +39,7 @@
             // Clear the map to avoid overlaying markers
             comsys.markers.forEach(function clear(entry) {
                 entry.setMap(null);
-            })
+            });
 
             var dummy = [
                 new google.maps.LatLng(50.776204378856654, 6.07514139264822),
@@ -78,7 +78,6 @@
                         color = "green";
                         return;
                     }
-                    ;
                 });
 
                 var circle = {
@@ -107,7 +106,6 @@
                 if (c === comsys.markers.length) {
                     clearInterval(timer);
                 }
-                ;
             }, 100);
 
 
@@ -316,22 +314,33 @@
 
     function updatePoly(array) {
 
+        /*
+         | Color code                     |
+         |         | Old        | New     |
+         |---------|------------|---------|
+         | Cold    | #047331    | #BFF0FF |
+         | Cool    | #388C04    | #9CDCF0 |
+         | Warm    | #CACE17    | #FFABA8 |
+         | Hot     | #E16519    | #FF7570 |
+         | Red Hot | #CA0300    | #FF413B |
+        */
+
         comsys.polys.forEach(function (entry, idx) {
             switch (true) {
                 case (array[idx] <= 50) :
-                    entry.poly.setOptions({strokeColor: "#047331", fillColor: "#047331"});
+                    entry.poly.setOptions({strokeColor: "#BFF0FF", fillColor: "#BFF0FF"});
                     break;
                 case (array[idx] > 50 && array[idx] <= 100):
-                    entry.poly.setOptions({strokeColor: "#388C04", fillColor: "#388C04"});
+                    entry.poly.setOptions({strokeColor: "#9CDCF0", fillColor: "#9CDCF0"});
                     break;
                 case (array[idx] > 100 && array[idx] <= 150):
-                    entry.poly.setOptions({strokeColor: "#CACE17", fillColor: "#CACE17"});
+                    entry.poly.setOptions({strokeColor: "#FFABA8", fillColor: "#FFABA8"});
                     break;
                 case (array[idx] > 150 && array[idx] <= 600):
-                    entry.poly.setOptions({strokeColor: "#E16519", fillColor: "#E16519"});
+                    entry.poly.setOptions({strokeColor: "#FF7570", fillColor: "#FF7570"});
                     break;
                 case (array[idx] > 600):
-                    entry.poly.setOptions({strokeColor: "#CA0300", fillColor: "#CA0300"});
+                    entry.poly.setOptions({strokeColor: "#FF413B", fillColor: "#FF413B"});
                     break;
                 default:
                     console.log("No color code");
