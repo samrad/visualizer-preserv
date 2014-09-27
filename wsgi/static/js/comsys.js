@@ -328,7 +328,7 @@
         comsys.polys.forEach(function (entry, idx) {
             switch (true) {
                 case (array[idx] <= 50) :
-                    entry.poly.setOptions({strokeColor: "#fee5d9", fillColor: "#fee5d9"});
+                    entry.poly.setOptions({strokeColor: "#fee5d", fillColor: "#fee5d9"});
                     break;
                 case (array[idx] > 50 && array[idx] <= 100):
                     entry.poly.setOptions({strokeColor: "#fcae91", fillColor: "#fcae91"});
