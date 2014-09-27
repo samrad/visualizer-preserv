@@ -318,29 +318,29 @@
          | Color code                     |
          |         | Old        | New     |
          |---------|------------|---------|
-         | Cold    | #047331    | #BFF0FF | 0000f1
-         | Cool    | #388C04    | #9CDCF0 | 00e3f5
-         | Warm    | #CACE17    | #FFABA8 | f6f400
-         | Hot     | #E16519    | #FF7570 | ff6700
-         | Red Hot | #CA0300    | #FF413B | f10700
+         | Cold    | #047331    | #BFF0FF | fee5d9
+         | Cool    | #388C04    | #9CDCF0 | fcae91
+         | Warm    | #CACE17    | #FFABA8 | fb6a4a
+         | Hot     | #E16519    | #FF7570 | de2d26
+         | Red Hot | #CA0300    | #FF413B | a50f15
         */
 
         comsys.polys.forEach(function (entry, idx) {
             switch (true) {
                 case (array[idx] <= 50) :
-                    entry.poly.setOptions({strokeColor: "#0000f1", fillColor: "#0000f1"});
+                    entry.poly.setOptions({strokeColor: "#fee5d9", fillColor: "#fee5d9"});
                     break;
                 case (array[idx] > 50 && array[idx] <= 100):
-                    entry.poly.setOptions({strokeColor: "#00e3f5", fillColor: "#00e3f5"});
+                    entry.poly.setOptions({strokeColor: "#fcae91", fillColor: "#fcae91"});
                     break;
                 case (array[idx] > 100 && array[idx] <= 150):
-                    entry.poly.setOptions({strokeColor: "#f6f400", fillColor: "#f6f400"});
+                    entry.poly.setOptions({strokeColor: "#fb6a4a", fillColor: "#fb6a4a"});
                     break;
                 case (array[idx] > 150 && array[idx] <= 600):
-                    entry.poly.setOptions({strokeColor: "#ff6700", fillColor: "#ff6700"});
+                    entry.poly.setOptions({strokeColor: "#de2d26", fillColor: "#de2d26"});
                     break;
                 case (array[idx] > 600):
-                    entry.poly.setOptions({strokeColor: "#f10700", fillColor: "#f10700"});
+                    entry.poly.setOptions({strokeColor: "#a50f15", fillColor: "#a50f15"});
                     break;
                 default:
                     console.log("No color code");

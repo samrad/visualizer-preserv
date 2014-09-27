@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b036c932-15ad-484a-9f1c-b94642f89393" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/js/comsys.js" afterPath="$PROJECT_DIR$/wsgi/static/js/comsys.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="openshift-comsys.iws" />
     <ignored path=".idea/workspace.xml" />
