@@ -318,29 +318,29 @@
          | Color code                     |
          |         | Old        | New     |
          |---------|------------|---------|
-         | Cold    | #047331    | #BFF0FF |
-         | Cool    | #388C04    | #9CDCF0 |
-         | Warm    | #CACE17    | #FFABA8 |
-         | Hot     | #E16519    | #FF7570 |
-         | Red Hot | #CA0300    | #FF413B |
+         | Cold    | #047331    | #BFF0FF | 0000f1
+         | Cool    | #388C04    | #9CDCF0 | 00e3f5
+         | Warm    | #CACE17    | #FFABA8 | f6f400
+         | Hot     | #E16519    | #FF7570 | ff6700
+         | Red Hot | #CA0300    | #FF413B | f10700
         */
 
         comsys.polys.forEach(function (entry, idx) {
             switch (true) {
                 case (array[idx] <= 50) :
-                    entry.poly.setOptions({strokeColor: "#BFF0FF", fillColor: "#BFF0FF"});
+                    entry.poly.setOptions({strokeColor: "#0000f1", fillColor: "#0000f1"});
                     break;
                 case (array[idx] > 50 && array[idx] <= 100):
-                    entry.poly.setOptions({strokeColor: "#9CDCF0", fillColor: "#9CDCF0"});
+                    entry.poly.setOptions({strokeColor: "#00e3f5", fillColor: "#00e3f5"});
                     break;
                 case (array[idx] > 100 && array[idx] <= 150):
-                    entry.poly.setOptions({strokeColor: "#FFABA8", fillColor: "#FFABA8"});
+                    entry.poly.setOptions({strokeColor: "#f6f400", fillColor: "#f6f400"});
                     break;
                 case (array[idx] > 150 && array[idx] <= 600):
-                    entry.poly.setOptions({strokeColor: "#FF7570", fillColor: "#FF7570"});
+                    entry.poly.setOptions({strokeColor: "#ff6700", fillColor: "#ff6700"});
                     break;
                 case (array[idx] > 600):
-                    entry.poly.setOptions({strokeColor: "#FF413B", fillColor: "#FF413B"});
+                    entry.poly.setOptions({strokeColor: "#f10700", fillColor: "#f10700"});
                     break;
                 default:
                     console.log("No color code");
