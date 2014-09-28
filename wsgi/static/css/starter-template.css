@@ -24,3 +24,29 @@ body {
 	display: block;
 }
 
+.color-code {
+    width: 25px;
+    height: 25px;
+    float: left;
+    display: block;
+}
+
+div#cc-1 {
+    background: #fee5d9;
+}
+
+div#cc-2 {
+    background: #fcae91;
+}
+
+div#cc-3 {
+    background: #fb6a4a;
+}
+
+div#cc-4 {
+    background: #de2d26;
+}
+
+div#cc-5 {
+    background: #a50f15;
+}
