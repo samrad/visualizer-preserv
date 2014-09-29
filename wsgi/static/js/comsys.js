@@ -10,10 +10,12 @@
     function startPeriodicSync() {
         stopPeriodicSync();
         comsys.intervalId = setInterval(comsys.update(), 10000);
+        console.log("Periodic update started");
     }
 
     function stopPeriodicSync() {
         clearInterval(comsys.intervalId);
+        console.log("Periodic update stopped");
     }
 
     comsys.init = function () {
@@ -29,13 +31,11 @@
             console.log("update clicked: " + comsys.enableUpdate);
 
             if (comsys.enableUpdate) {
-                $("#timer").html("Waiting");
-                comsys.update();
+                $("#update").css("color", "#fb6a4a")
+//                comsys.update();
                 startPeriodicSync();
             } else {
-                $("#timer").html("Stopped");
                 stopPeriodicSync();
-                console.log("update stopped");
             }
 
             return false;
@@ -303,7 +303,6 @@
 
 
     var performRequest = function () {
-        $("#timer").html("Sending");
         var request = $.ajax({
             url: "/rhino",
             type: "GET",
@@ -313,12 +312,10 @@
         request.done(function (data) {
             console.log("update success");
             updatePoly(shuffle(data));
-//            comsys.update();
         });
 
         request.error(function (data) {
             console.log("update failed");
-//            comsys.update();
         });
     }
 
