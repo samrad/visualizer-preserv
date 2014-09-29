@@ -7,13 +7,27 @@
     // Flag to toggle the update
     comsys.enableUpdate = false;
 
+    // This is the update ascii spinner
+    var spins = "◴◷◶◵";
+    var label$ = $("#update-spinner");
+    var i = 0;
+    function animateDot() {
+        var spins = "◴◷◶◵";
+        var label$ = $("#update-spinner");
+        i = i == spins.length - 1 ? 0 : ++i;
+        console.log(i);
+        label$.text(spins[i]);
+    }
+
     function startPeriodicSync() {
         stopPeriodicSync();
-        comsys.intervalId = setInterval(comsys.update(), 10000);
+        comsys.spinIntId = setInterval(animateDot, 200);
+        comsys.intervalId = setInterval(comsys.update, 10000);
         console.log("Periodic update started");
     }
 
     function stopPeriodicSync() {
+        clearInterval(comsys.spinIntId);
         clearInterval(comsys.intervalId);
         if (comsys.request && comsys.request.readystate != 4) {
             comsys.request.abort();
@@ -35,9 +49,11 @@
 
             if (comsys.enableUpdate) {
                 $("#update").css("color", "#fb6a4a")
-//                comsys.update();
+                $("#update-spinner").css("color", "#fb6a4a")
                 startPeriodicSync();
             } else {
+                $("#update").css("color", "")
+                $("#update-spinner").css("color", "")
                 stopPeriodicSync();
             }
 
