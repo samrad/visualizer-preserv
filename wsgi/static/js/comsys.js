@@ -313,12 +313,12 @@
         request.done(function (data) {
             console.log("update success");
             updatePoly(shuffle(data));
-            comsys.update();
+//            comsys.update();
         });
 
         request.error(function (data) {
             console.log("update failed");
-            comsys.update();
+//            comsys.update();
         });
     }
 
