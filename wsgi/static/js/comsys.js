@@ -15,6 +15,7 @@
 
     function stopPeriodicSync() {
         clearInterval(comsys.intervalId);
+        comsys.request.abort();
         console.log("Periodic update stopped");
     }
 
@@ -164,7 +165,6 @@
     // Render ploys on map (private)
     function drawPolys() {
         comsys.polys.forEach(function (entry) {
-            console.log(entry.poly);
             entry.poly.setMap(comsys.map);
         });
     };
@@ -303,18 +303,18 @@
 
 
     var performRequest = function () {
-        var request = $.ajax({
+        comsys.request = $.ajax({
             url: "/rhino",
             type: "GET",
             dataType: "json"
         });
 
-        request.done(function (data) {
+        comsys.request.done(function (data) {
             console.log("update success");
             updatePoly(shuffle(data));
         });
 
-        request.error(function (data) {
+        comsys.request.error(function (data) {
             console.log("update failed");
         });
     }
