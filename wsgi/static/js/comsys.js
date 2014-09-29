@@ -15,7 +15,9 @@
 
     function stopPeriodicSync() {
         clearInterval(comsys.intervalId);
-        comsys.request.abort();
+        if (comsys.request && comsys.request.readystate != 4) {
+            comsys.request.abort();
+        }
         console.log("Periodic update stopped");
     }
 
