@@ -306,7 +306,9 @@
 
         comsys.request.done(function (data) {
             console.log("update success");
-            updatePoly(shuffle(data));
+            updatePoly(data);
+            // Shuffle dummy data
+//          updatePoly(shuffle(data));
         });
 
         comsys.request.error(function (data) {
