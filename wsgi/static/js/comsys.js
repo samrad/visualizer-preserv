@@ -7,15 +7,12 @@
     // Flag to toggle the update
     comsys.enableUpdate = false;
 
-    // This is the update ascii spinner
-    var spins = "◴◷◶◵";
-    var label$ = $("#update-spinner");
+    // Update ascii spinner
     var i = 0;
     function animateDot() {
         var spins = "◴◷◶◵";
         var label$ = $("#update-spinner");
         i = i == spins.length - 1 ? 0 : ++i;
-        console.log(i);
         label$.text(spins[i]);
     }
 
@@ -60,26 +57,6 @@
             return false;
 
         });
-
-//        // Click handler for update
-//        $("#update").click(function () {
-//
-//            // Toggle the update status
-//            comsys.enableUpdate = !comsys.enableUpdate;
-//            console.log("update clicked: " + comsys.enableUpdate);
-//
-//            if (comsys.enableUpdate) {
-//                $("#timer").html("Waiting");
-//                comsys.update();
-//            } else {
-//                $("#timer").html("Stopped");
-//                console.log("update stopped");
-//                clearTimeout(comsys.timeoutId);
-//            }
-//
-//            return false;
-//
-//        });
 
         // Click handler for dummy
         $("#dummy").click(function () {

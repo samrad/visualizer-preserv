@@ -24,6 +24,7 @@ if cherrypy.__version__.startswith('3.0') and cherrypy.engine.state == 0:
 
 
 class Root(object):
+    incoming = [13]
     _cp_config = {'tools.staticdir.on': True,
                   'tools.staticdir.dir': STATIC_DIR,
                   'tools.staticdir.index': 'bs-index.html',
@@ -50,6 +51,16 @@ class Root(object):
         classifier = CoordsClassifier()
         classifier.read_json(os.path.join(STATIC_DIR, u'polygons.json'))
         return classifier.classify()
+
+    @cherrypy.expose
+    def accept(self, data):
+        Root.incoming = json.loads(data)
+        return "ACK"
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def dingo(self):
+        return Root.incoming
 
 
 application = cherrypy.Application(Root(), script_name=None, config=None)
