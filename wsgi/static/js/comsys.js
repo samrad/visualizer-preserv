@@ -19,6 +19,8 @@
     function startPeriodicSync() {
         stopPeriodicSync();
         comsys.spinIntId = setInterval(animateDot, 200);
+
+        // This is the periodic update interval. Currently 10 seconds.
         comsys.intervalId = setInterval(comsys.update, 10000);
         console.log("Periodic update started");
     }
@@ -292,14 +294,12 @@
 
     // Ajax call to update the data.
     comsys.update = function () {
-//        comsys.timeoutId = setTimeout(performRequest, 10000);
         performRequest();
     }
 
-
     var performRequest = function () {
         comsys.request = $.ajax({
-            url: "/rhino",
+            url: "/dingo", // change to {url: "/rhino"} for using dummy coords
             type: "GET",
             dataType: "json"
         });
@@ -351,23 +351,29 @@
 
         comsys.polys.forEach(function (entry, idx) {
             switch (true) {
-                case (array[idx] <= 50) :
+                // Cold
+                case (array[idx] <= 50 && array[idx] > 0):
                     entry.poly.setOptions({strokeColor: "#fee5d9", fillColor: "#fee5d9"});
                     break;
+                // Cool
                 case (array[idx] > 50 && array[idx] <= 100):
                     entry.poly.setOptions({strokeColor: "#fcae91", fillColor: "#fcae91"});
                     break;
+                // Warm
                 case (array[idx] > 100 && array[idx] <= 150):
                     entry.poly.setOptions({strokeColor: "#fb6a4a", fillColor: "#fb6a4a"});
                     break;
+                // Hot
                 case (array[idx] > 150 && array[idx] <= 600):
                     entry.poly.setOptions({strokeColor: "#de2d26", fillColor: "#de2d26"});
                     break;
+                // Red Hot
                 case (array[idx] > 600):
                     entry.poly.setOptions({strokeColor: "#a50f15", fillColor: "#a50f15"});
                     break;
                 default:
-                    console.log("No color code");
+                    // Reset back to original color
+                    entry.poly.setOptions({strokeColor: "#27BAFF", fillColor: "#27BAFF"});
             }
 
         });

@@ -5,8 +5,10 @@ import math
 
 
 class RandomCoordsRect:
-    """random coordinate generator within boundary"""
-
+    """
+    Random coordinate generator within a rectangle
+    boundary.
+    """
     def __init__(self, n, w, s, e):
         self.north_limit = math.radians(n)
         self.west_limit = math.radians(w)

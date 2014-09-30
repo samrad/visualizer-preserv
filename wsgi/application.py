@@ -24,7 +24,7 @@ if cherrypy.__version__.startswith('3.0') and cherrypy.engine.state == 0:
 
 
 class Root(object):
-    incoming = [13]
+    incoming = [0]
     _cp_config = {'tools.staticdir.on': True,
                   'tools.staticdir.dir': STATIC_DIR,
                   'tools.staticdir.index': 'bs-index.html',
@@ -32,15 +32,25 @@ class Root(object):
 
     @cherrypy.expose
     def index(self):
+        """
+        Returns the static index page.
+        """
         return open(os.path.join(STATIC_DIR, u'bs-index.html'))
 
     @cherrypy.expose
     def generate(self, coords):
+        """
+        Generates random hex strings with length of 'coords'
+        - FOR TESTING PURPOSE ONLY -
+        """
         return ''.join(random.sample(string.hexdigits, int(coords)))
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
     def monkey(self):
+        """
+        Reads the JSON file and returns it.
+        """
         polys = open(os.path.join(STATIC_DIR, u'polygons.json'))
         polys_json = json.load(polys)
         return polys_json
@@ -48,18 +58,31 @@ class Root(object):
     @cherrypy.expose
     @cherrypy.tools.json_out()
     def rhino(self):
+        """
+        Using 'RandomCoordsRect', it generates 50000 random coordinates
+        and counts the ones that are inside polygons.
+        - FOR TESTING PURPOSE ONLY -
+        """
         classifier = CoordsClassifier()
         classifier.read_json(os.path.join(STATIC_DIR, u'polygons.json'))
         return classifier.classify()
 
     @cherrypy.expose
     def accept(self, data):
+        """
+        Receives the calculated secret from PrivacyPeers and
+        stores it in class variable.
+        """
         Root.incoming = json.loads(data)
         return "ACK"
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
     def dingo(self):
+        """
+        Returns the stored secret. This is called by Ajax
+        periodically to refresh the heat-map.
+        """
         return Root.incoming
 
 
