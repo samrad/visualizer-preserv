@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 OpenShift-CherryPy
 ---
 
@@ -24,3 +25,9 @@ and then defining the [mod_wsgi application](https://github.com/penguinforge/ope
 The OpenShift `python` cartridge documentation can be [found here](https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-python/README.md).
 
 Credit: The magic of this example is provided by [tools.cherrypy](http://tools.cherrypy.org/wiki/ModWSGI)
+=======
+visualizer-preserv
+==================
+
+visualizer-preserv
+>>>>>>> 89674ee3dde948284bf1001fe752a42dbe2a39e8
