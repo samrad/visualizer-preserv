@@ -50,3 +50,7 @@ div#cc-4 {
 div#cc-5 {
     background: #a50f15;
 }
+
+div#update-spinner {
+    font-size: 30px;
+}
