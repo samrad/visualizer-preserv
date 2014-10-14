@@ -10,7 +10,7 @@
     // Update ascii spinner
     var i = 0;
     function animateDot() {
-        var spins = "◴◷◶◵";
+        var spins = "◐◓◑◒";
         var label$ = $("#update-spinner");
         i = i == spins.length - 1 ? 0 : ++i;
         label$.text(spins[i]);
